@@ -13,7 +13,7 @@ fun main() {
     println("Cadastro concluído com sucesso. Dados do gamer:")
     println(gamer)
 
-    println("Idade do gamer '${gamer.name}': ${gamer.breathDay?.toAge()}")
+    println("Idade do gamer '${gamer.name}': ${gamer.dateOfBirth?.toAge()}")
 
     do {
         println("Digite um código do jogo para buscar: ")

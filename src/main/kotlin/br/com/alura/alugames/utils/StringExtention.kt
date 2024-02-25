@@ -6,8 +6,8 @@ import java.time.format.DateTimeFormatter
 
 fun String.toAge(): Int {
     val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-    val breathDay = LocalDate.parse(this, formatter)
+    val dateOfBirth = LocalDate.parse(this, formatter)
     val now = LocalDate.now()
 
-    return Period.between(breathDay, now).years
+    return Period.between(dateOfBirth, now).years
 }

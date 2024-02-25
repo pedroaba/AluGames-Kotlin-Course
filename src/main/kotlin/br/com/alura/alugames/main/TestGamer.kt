@@ -10,7 +10,7 @@ fun main() {
     println(gamer2)
 
     gamer1.let {
-        it.breathDay = "18/09/2000"
+        it.dateOfBirth = "18/09/2000"
         it.user = "jacqueskywalker"
     }.also {
         println(gamer1.internalId)
