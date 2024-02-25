@@ -2,7 +2,7 @@ package br.com.alura.alugames.models
 
 import br.com.alura.alugames.enums.PlanType
 
-class SeparatePlan(type: PlanType) : Plan(type) {
+class SeparatePlan(type: PlanType, id: Int = 0) : Plan(type, id) {
     override fun calc(rent: Rent): Double {
         val originalValue = super.calc(rent)
 

@@ -41,9 +41,9 @@ fun main() {
                 val description = read.nextLine()
 
                 if (description.isNullOrEmpty()) {
-                    myGame?.setDescription(myGame?.getTitle()!!)
+                    myGame?.description = myGame?.title!!
                 } else {
-                    myGame?.setDescription(description)
+                    myGame?.description = description
                 }
             }
 
@@ -59,15 +59,15 @@ fun main() {
 
     println("\n Jogos ordenados por título: ")
     gamer.searchedGames.sortBy {
-        it.getTitle()
+        it.title
     }
 
     gamer.searchedGames.forEach {
-        println("Título: ${it.getTitle()}")
+        println("Título: ${it.title}")
     }
 
     val gamesFiltered = gamer.searchedGames.filter {
-        it.getTitle().contains("batman", ignoreCase = true)
+        it.title.contains("batman", ignoreCase = true)
     }
 
     println("\n Jogos Filtrados:")

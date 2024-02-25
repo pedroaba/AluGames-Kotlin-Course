@@ -49,10 +49,15 @@ data class Gamer(var name: String, var email: String) : Recommendable {
         }
     }
 
-    constructor(name: String, email: String, dateOfBirth: String, user: String) : this(name, email) {
+    constructor(name: String, email: String, dateOfBirth: String, user: String, internalId: String = "") : this(name, email) {
         this.dateOfBirth = dateOfBirth
         this.user = user
-        generateInternalId()
+
+        if (internalId.isEmpty()) {
+            generateInternalId()
+        } else {
+            this.internalId = internalId
+        }
     }
 
     override fun toString(): String {

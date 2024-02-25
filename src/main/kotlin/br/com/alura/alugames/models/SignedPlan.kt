@@ -5,9 +5,10 @@ import br.com.alura.alugames.enums.PlanType
 class SignedPlan(
     type: PlanType,
     val monthlyPayment: Double,
-    private val includedGames: Int,
-    private val reputationDiscountPercentage: Double
-) : Plan(type) {
+    val includedGames: Int,
+    val reputationDiscountPercentage: Double,
+    id: Int = 0
+) : Plan(type, id) {
     override fun calc(rent: Rent): Double {
         val totalOfGamesOnMonth = rent.gamer.gamesInMonth(rent.period.startDate.monthValue).size + 1
 
